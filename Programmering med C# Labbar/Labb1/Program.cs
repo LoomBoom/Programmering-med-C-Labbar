@@ -1,9 +1,11 @@
-﻿Console.WriteLine("Skriv in en text!");
+﻿using System.Numerics;
+
+Console.WriteLine("Skriv in en text!");
 
 string userText = Console.ReadLine();
 int startNumber;
 int startIndex;
-long sum = 0;
+BigInteger sum = 0;
 
 for (int i = 0; i < userText.Length; i++)
 {
@@ -46,7 +48,7 @@ static void PrintHighLightedString(int startIndex, int endIndex, string userText
     }
 }
 
-static long GetValueFromString(int startIndex, int endIndex, string userText)
+static BigInteger GetValueFromString(int startIndex, int endIndex, string userText)
 {
-    return long.Parse(userText.Substring(startIndex, endIndex - startIndex));
+    return BigInteger.Parse(userText.Substring(startIndex, endIndex - startIndex));
 }
